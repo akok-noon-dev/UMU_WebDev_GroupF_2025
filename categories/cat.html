@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library categories</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="./categories/cat.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="../images/umu logo.png" alt="UMU Logo" style="height: 70px; width: 70px;" class="me-2">
+                </a>
+
+                <!-- Center: University Name -->
+                <div class="university-title d-none d-lg-block me-4">
+                    <h2 class="mb-0 text-light">
+                        <span class="highlight-initial">U</span>ganda
+                        <span class="highlight-initial">M</span>artyrs
+                        <span class="highlight-initial">U</span>niversity
+                    </h2>
+                    <p class="mb-0 text-light" style="font-size: 0.9rem;">Digital Library System</p>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Right: Menu Items -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./books/book.html"><i class="fas fa-book me-1"></i> Books</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./categories/cat.html"><i class="fas fa-list me-1"></i> Categories</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i> About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right-most Red Login Button -->
+                    <div class="d-flex">
+                        <a href="login.html" class="btn btn-login" style="background-color: #CC1B00; color:white;">
+                            <i class="fas fa-sign-in-alt me-1"></i> LOGIN
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <br>
+
+    <main class="pt-5 mt-5">
+        <section class="container py-5">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h1 class="fw-bold">Book Categories</h1>
+                    <p class="text-muted">Explore collections grouped by type — from Fiction to Science and more.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Fiction -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div id="carouselFiction" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../images/hobbit.jpg" class="d-block w-100" alt="Fiction - Hobbit">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/The-Great-Gatsby.png" class="d-block w-100" alt="Fiction - The Great Gatsby">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/pride and prejudice.jpeg" class="d-block w-100" alt="Fiction - Pride and Prejudice">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/to kill a mocking bird.jpg" class="d-block w-100" alt="Fiction - To Kill A Mockingbird">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFiction" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFiction" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Fiction</h5>
+                            <p class="card-text">Novels, Short Stories, and Literary Fiction for every reader.</p>
+                            <a href="../books/book.html?category=fiction" class="btn btn-primary mt-auto">View Books</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Non-Fiction -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div id="carouselNonFiction" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../images/bk1.jpg" class="d-block w-100" alt="Non-Fiction">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/bk10.jpg" class="d-block w-100" alt="Non-Fiction">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/bk11.jpg" class="d-block w-100" alt="Non-Fiction">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNonFiction" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselNonFiction" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Non-Fiction</h5>
+                            <p class="card-text">Biographies, Essays, Memoirs, and other factual reads.</p>
+                            <a href="../books/book.html?category=nonfiction" class="btn btn-primary mt-auto">View Books</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Science & Technology -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div id="carouselScience" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../images/javascript.jpg" class="d-block w-100" alt="Science & Technology">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/bk5.jpg" class="d-block w-100" alt="Science & Technology">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/bk9.jpg" class="d-block w-100" alt="Science & Technology">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselScience" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselScience" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Science & Technology</h5>
+                            <p class="card-text">STEM resources including programming, engineering, and applied sciences.</p>
+                            <a href="../books/book.html?category=science" class="btn btn-primary mt-auto">View Books</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div id="carouselHistory" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../images/1984.jpg" class="d-block w-100" alt="History - 1984">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/bk6.jpg" class="d-block w-100" alt="History">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/bk12.jpg" class="d-block w-100" alt="History">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHistory" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselHistory" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">History</h5>
+                            <p class="card-text">World history, local histories, and reference materials chronicling the past.</p>
+                            <a href="../books/book.html?category=history" class="btn btn-primary mt-auto">View Books</a>
+                        </div>
+                    </div>
+                </div>
+
+              
+
+                <!-- Children -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div id="carouselChildren" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="../images/bk7.jpg" class="d-block w-100" alt="Children's">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/bk8.jpg" class="d-block w-100" alt="Children's">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="../images/bk13.jpg" class="d-block w-100" alt="Children's">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselChildren" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselChildren" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Children's Books</h5>
+                            <p class="card-text">Picture books, early readers, and educational titles for children.</p>
+                            <a href="../books/book.html?category=children" class="btn btn-primary mt-auto">View Books</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+      <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; home page created by MUGENYI DULTON -2025-B291-14579. All rights reserved.</p>
+                    <div class="student-details">
+                        </strong> [MUGENYI DULTON -2025-B291-14579]</p> </strong>stud. No. 2500504579</p>
+                        <p><strong>Project:</strong> Interactive Multi-Page Website - UMU Web Development Examination</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./cat.js"></script>
+</body>
+
+</html>
