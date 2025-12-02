@@ -33,3 +33,17 @@
     color: #fff;
     transform: translateY(-2px);
 }
+.footer {
+    background: #1e0202;
+    color: white;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    text-align: center;
+}
+.footer-content p {
+    margin: 0;
+    font-size: 1rem;
+}
