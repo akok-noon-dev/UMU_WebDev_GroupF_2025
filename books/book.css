@@ -47,3 +47,29 @@
     margin: 0;
     font-size: 1rem;
 }
+
+/* Ensure main content is visible below the fixed header */
+main {
+    padding-top: 4.5rem;
+}
+
+/* Provide consistent card image sizing */
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Section titles */
+.fw-bold {
+    letter-spacing: 0.2px;
+}
+
+.section-header p {
+    color: #666;
+}
+
+/* outline highlight when navigated via query param */
+.outline-highlight {
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
+    transition: box-shadow 0.25s ease-in-out;
+}

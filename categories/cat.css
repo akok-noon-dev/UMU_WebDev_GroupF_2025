@@ -47,3 +47,25 @@
     margin: 0;
     font-size: 1rem;
 }
+
+/* Category card image sizing */
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Ensure content is not hidden behind fixed header */
+main {
+    padding-top: 4.5rem; /* compensate for fixed header height */
+}
+
+/* Carousel inside card - size images to fit card */
+.card .carousel,
+.card .carousel-inner,
+.card .carousel-item {
+    height: 220px;
+}
+.card .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
