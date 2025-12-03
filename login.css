@@ -12,7 +12,49 @@ body {
     align-items: center;
     justify-content: center;
 }
+/* NAVBAR STYLE */
+.navbar {
+    width: 100%;
+    background: #8d0000; /* Deep red */
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
 
+.nav-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #4fa6ff;
+    font-weight: 500;
+}
+
+.wrapper {
+    margin-top: 80px;
+}
 .wrapper {
     width: 100%;
     max-width: 450px;
@@ -141,6 +183,4 @@ body {
 .footer p{
     text-align: center;
 }
-.footer{
-    back
-}
+
