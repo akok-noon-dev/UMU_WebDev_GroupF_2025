@@ -1,0 +1,30 @@
+.mycards{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 6%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+}
+.directors{
+display: flex;
+justify-content:space-around;
+margin-bottom: 5%;
+
+
+}
+body{
+background-image: url(./images.jpeg);
+     background-repeat: cover;
+     background-size: 100%;
+
+
+}
+.footer{
+    background-color: rgb(145, 124, 166);
+
+
+
+
+
+}
