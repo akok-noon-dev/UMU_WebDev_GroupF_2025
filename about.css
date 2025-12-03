@@ -1,0 +1,94 @@
+
+body{
+   /* background-image: url(./brown\ background.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(192, 173, 149);
+}
+
+.maindiv{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+
+
+}
+.carouselslide{
+padding: 2%;
+
+}
+.navbar:hover{
+    color: goldenrod;
+
+
+}
+.us{
+    
+    display: flex;
+    height: 10%;
+    
+    width: 60%;
+     justify-content: space-around;
+    margin-top: 2%;
+    border-radius: 5%;
+    margin-bottom: 5%;
+}
+.footer{
+display: flex;
+justify-content: space-around;
+text-emphasis-color: goldenrod;
+background-color: peachpuff;
+margin-top: 2%;
+
+
+}
+
+.man{
+    flex-basis:36% ;
+    height:10%
+}
+.woman{
+    flex-basis:36% ;
+    height:10% ;
+    
+}
+
+.card1{
+    flex-basis: 20%;
+    height: 20%;
+
+}
+.card2{
+    flex-basis: 20%;
+     height: 20%;
+
+}
+.card3{
+flex-basis: 20% ;
+height:20% ;
+
+}
+.more{
+
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+.more1{
+    flex-basis:18% ;
+    margin-right:5% ;
+}
+.more2{
+    flex-basis:18% ;
+    margin-left:5% ;
+}
+.more3{
+    flex-basis:18% ;
+    margin-left:5% ;
+}
+#carouselExampleRide{
+    border-radius: 5%;
+    justify-content: space-around;
+
+}
