@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CONTACT US</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: rgba(204, 27, 0, 0.2);
+        }
+    </style>
+
+
+
+</head>
+
+
+<body>
+    <!--------------------------------------------navbar starts here----------------------------------->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success text-dark" role="button" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success text-dark" role="button" href="#books">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success text-dark" role="button" href="#categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success text-dark" role="button" href="#about us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-success text-dark" role="button" href="#contact us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--------------------------------------------navbar ends here----------------------------------------------->
+    <!--------------------------------------form starts here----------------------------->
+
+
+    
+    <h1 style="margin-left: 25%; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; text-shadow: 10px;">GET IN TOUCH
+        WITH US</h1>
+    <hr style="color: darkblue;">
+
+    <div class="main-div">
+        <div class="third-div" style="font-weight: bold;">
+            <center>
+                <h2 style="font-family: 'Times New Roman', Times, serif;"><i>OUR SOCIAL MEDIA PLATFORMS</i></h2>
+                <hr>
+                <i class="bi bi-whatsapp"></i>
+                WHATSAPP
+                <P>+256 (0) 704542018<br>
+                    +256 (0) 782730579
+                </P>
+                <hr>
+                <i class="bi bi-envelope-at-fill"></i>
+                EMAIL
+                <p>umuelibrary@gmail.com</p>
+                <hr>
+                <i class="bi bi-instagram"></i>
+                INSTAGRAM
+                <p>umu elibrary</p>
+                <hr>
+                <i class="bi bi-geo-alt-fill"></i>
+
+                LOCATION
+                <P>We are located at Uganda Martyrs University IT Department opposite the Auditorium</P>
+                <hr>
+                <i class="bi bi-calendar"></i>
+
+                WORKING TIMEFRAME
+                <p>24/7</p>
+                <hr>
+                <i class="bi bi-twitter-x"></i>
+                TWITTER
+                <p>Umu elibrary</p>
+            </center>
+        </div>
+
+
+        <div class="form">
+            <h2 style="font-family: 'Times New Roman', Times, serif;">CONTACT US</h2>
+            <div class="second-div">
+                <form id="userform" novalidate>
+                    <div class="form-group">
+                        <label>FIRST NAME</label><BR>
+                        <input type="text" id="firstname" class="form-input" required>
+                        <span class="error-message" id="firstname-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>LAST NAME</label><br>
+                        <input type="text" id="lastname" class="form-input" required>
+                        <span class="error-message" id="lastname-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>EMAIL</label><br>
+                        <input type="email" id="email" class="form-input" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>TEL</label><br>
+                        <input type="tel" id="tel" class="form-input" required>
+                        <span class="error-message" id="tel-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>IDENTITY</label><br>
+                        <select id="identity" class="form-input" style="border-radius: 5px;" required>
+                            <option value="">-- Select an option --</option>
+                            <option value="student">STUDENT</option>
+                            <option value="staffmember">STAFF MEMBER</option>
+                            <option value="other">OTHER</option>
+                        </select>
+                        <span class="error-message" id="identity-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>MESSAGE US</label><br>
+                        <textarea id="usermessage" rows="5" cols="50" class="form-input"></textarea>
+                        <span class="error-message" id="usermessage-error"></span>
+                    </div>
+                    <center>
+                        <button type="submit" class="submit">
+                            submit
+                        </button>
+                    </center>
+                </form>
+                <P id="message" style="color: red; margin-top: 20px;"></P>
+            </div>
+        </div>
+        <!--------form ends here---------->
+
+    </div>
+    <hr style="color: blue;">
+
+    <footer>
+        <div class="footer">
+            <div class="footer-one">
+                
+
+            </div>
+            <div class="footer-two">
+        
+
+
+
+                </li>
+            </div>
+            <div class="footer-three">
+                <center>
+                
+                Katende JORAM-PAUL<br>
+                2025-B071-10973<br>
+                jorampaulkatende6@gmail.com<br>
+                BSIT
+               </center>
+
+
+            </div>
+
+
+        </div>
+        </div>
+
+    </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+         <script src="contact.js"></script>
+</body>
+
+</html>
