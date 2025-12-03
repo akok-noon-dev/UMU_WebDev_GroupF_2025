@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif;
     background-color: #f5f6fa;
     color: #444;
     line-height: 1.6;
@@ -277,6 +277,84 @@ body {
     color: #CC1B00;
     margin-bottom: 15px;
 }
+.whats-new {
+    background: #faefd8;
+    padding: 50px 0;
+}
+
+.new-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.new-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Carousel styling */
+.new-carousel {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.new-carousel img {
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Text styling */
+.new-content {
+    max-width: 600px;
+}
+
+.new-date {
+    font-size: 0.9rem;
+    color: #333;
+    font-style: italic;
+}
+
+.new-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.new-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.new-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #cc1b00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.new-link:hover {
+    text-decoration: underline;
+}
+
+/* Make responsive */
+@media (max-width: 768px) {
+    .new-wrapper {
+        flex-direction: column;
+    }
+
+    .new-carousel {
+        width: 100%;
+    }
+}
 
 /* FOOTER */
 .footer {
@@ -290,18 +368,20 @@ body {
     text-align: center;
 }
 
-/*  KEN BURNS ANIMATION */
-/*@keyframes kenburns {
-    0% {
-        transform: scale(1);
-        background-position: center;
-    }
-    50% {
-        transform: scale(0.33s);
-        background-position: center top;
-    }
-    100% {
-        transform: scale(0.33s);
-        background-position: center;
-    }
+.social-links {
+    margin-top: 15px;
+    text-align: center;
 }
+
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #CC1B00; 
+}
+
+
