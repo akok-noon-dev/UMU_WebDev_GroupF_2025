@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library Login Portal</title>
+    <link rel="stylesheet" href="./login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="login-container">
+        
+        <div class="tabs">
+            <button class="tab active" data-target="student-form">Student</button>
+            <button class="tab" data-target="staff-form">Staff</button>
+        </div>
+
+        <div class="forms">
+            
+            <!-- Student Login -->
+            <form id="student-form" class="form active">
+                <h2>Student Login</h2>
+
+                <div class="input-field">
+                    <label>Student ID</label>
+                    <div class="input-box">
+                        
+                        <input type="text" placeholder="Enter student ID" required>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Password</label>
+                    <div class="input-box">
+                       
+                        <input type="password" placeholder="Enter password" required>
+                    </div>
+                </div>
+
+                <button class="submit-btn">Login</button>
+                <p class="forgot">Forgot password?</p>
+            </form>
+
+            <!-- Staff Login -->
+            <form id="staff-form" class="form">
+                <h2>Staff Login</h2>
+
+                <div class="input-field">
+                    <label>Email / Staff ID</label>
+                    <div class="input-box">
+                        
+                        <input type="text" placeholder="Enter staff ID" required>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Password</label>
+                    <div class="input-box">
+                        
+                        <input type="password" placeholder="Enter password" required>
+                    </div>
+                </div>
+
+                <button class="submit-btn">Login</button>
+                <p class="forgot">Forgot password?</p>
+            </form>
+
+        </div>
+    </div>
+   
+</div>
+
+
+<script src="./login.js"></script>
+</body>
+</html>
