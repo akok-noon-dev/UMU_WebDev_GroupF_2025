@@ -123,3 +123,20 @@ main {
     transform: translateY(-10px);
     box-shadow: 0 22px 50px rgba(0,0,0,0.2);
 }
+
+/* JS-applied interaction state: mirrors :hover for pointer/touch/keyboard users */
+.card.interacting {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+    cursor: pointer;
+}
+
+.category-card.interacting {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 50px rgba(0,0,0,0.2);
+}
+
+/* Make focus visible and consistent when keyboard navigating */
+.card:focus-within {
+    outline: 3px solid rgba(0,123,255,0.18);
+}
