@@ -11,64 +11,39 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
+    <header>
 
-                <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="./images/umu logo.png" alt="UMU Logo" style="height: 70px; width: 70px;" class="me-2">
+        <!-- Right: Menu Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./books/book.html"><i class="fas fa-book me-1"></i> Books</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./categories/cat.html"><i class="fas fa-list me-1"></i> Categories</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i> About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+                </li>
+            </ul>
+
+            <!-- Right-most Red Login Button -->
+            <div class="d-flex">
+                <a href="login.html" class="btn btn-login" style="background-color: #CC1B00; color:white;">
+                    <i class="fas fa-sign-in-alt me-1"></i> LOGIN
                 </a>
-
-                <!-- Center: University Name -->
-                <div class="university-title d-none d-lg-block me-4">
-                    <h2 class="mb-0 text-light">
-                        <span class="highlight-initial">U</span>ganda
-                        <span class="highlight-initial">M</span>artyrs
-                        <span class="highlight-initial">U</span>niversity
-                    </h2>
-                    <p class="mb-0 text-light" style="font-size: 0.9rem;">Digital Library System</p>
-                </div>
-
-                <!-- Mobile Toggle -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Right: Menu Items -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./books/book.html"><i class="fas fa-book me-1"></i> Books</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./categories/cat.html"><i class="fas fa-list me-1"></i>
-                                Categories</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i> About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
-                        </li>
-                    </ul>
-
-                    <!-- Right-most Red Login Button -->
-                    <div class="d-flex">
-                        <a href="login.html" class="btn btn-login" style="background-color: #CC1B00; color:white;">
-                            <i class="fas fa-sign-in-alt me-1"></i> LOGIN
-                        </a>
-                    </div>
-                </div>
             </div>
-        </nav>
+        </div>
     </header>
     <main class="pt-5 mt-5">
         <section class="container py-5" id="fiction">
@@ -90,7 +65,10 @@
                                     <p class="card-text"><strong>Author:</strong> J.R.R. Tolkien</p>
                                     <p class="card-text">A classic fantasy about Bilbo Baggins and his quest across
                                         Middle-earth.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="12.99">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +82,10 @@
                                     <p class="card-text"><strong>Author:</strong> F. Scott Fitzgerald</p>
                                     <p class="card-text">A tale of wealth, love, and the American dream set in the
                                         Roaring Twenties.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="9.5">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -119,7 +100,10 @@
                                     <p class="card-text"><strong>Author:</strong> Jane Austen</p>
                                     <p class="card-text">A romantic novel of manners that explores issues of marriage
                                         and morality.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="8.75">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +118,10 @@
                                     <p class="card-text"><strong>Author:</strong> Harper Lee</p>
                                     <p class="card-text">A seminal novel about racial injustice and moral growth in the
                                         American South.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="11.0">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +135,10 @@
                                     <p class="card-text"><strong>Author:</strong> Herman Melville</p>
                                     <p class="card-text">An epic tale of obsession and the sea, following Captain Ahab's
                                         pursuit of the white whale.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="13.5">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +152,10 @@
                                     <p class="card-text"><strong>Author:</strong> Aldous Huxley</p>
                                     <p class="card-text">A dystopian novel exploring a technologically controlled future
                                         and the cost of stability.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="10.0">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -189,7 +182,10 @@
                                     <p class="card-text"><strong>Author:</strong> A. Economist</p>
                                     <p class="card-text">An approachable overview of modern economic thinking for
                                         students and general readers.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="18.0">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -201,7 +197,10 @@
                                     <p class="card-text"><strong>Author:</strong> L. Leader</p>
                                     <p class="card-text">Lessons and case studies on leadership and organizational
                                         behavior.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="20.0">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -212,7 +211,10 @@
                                     <h5 class="card-title">Voices of Memoir</h5>
                                     <p class="card-text"><strong>Author:</strong> M. Biographer</p>
                                     <p class="card-text">A collection of personal memoirs by notable public figures.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="14.0">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -239,7 +241,10 @@
                                     <h5 class="card-title">Learning JavaScript</h5>
                                     <p class="card-text"><strong>Author:</strong> J. Coder</p>
                                     <p class="card-text">Practical introduction to JavaScript for web development.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="24.5">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -251,7 +256,10 @@
                                     <p class="card-text"><strong>Author:</strong> E. Engineer</p>
                                     <p class="card-text">Foundational concepts and applied techniques across engineering
                                         disciplines.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="22.0">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -263,7 +271,10 @@
                                     <p class="card-text"><strong>Author:</strong> D. Analyst</p>
                                     <p class="card-text">Introductory guide to data analysis, visualization and machine
                                         learning basics.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="26.0">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -290,7 +301,10 @@
                                     <p class="card-text"><strong>Author:</strong> George Orwell</p>
                                     <p class="card-text">A classic that explores the dangers of totalitarianism and
                                         surveillance.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="9.99">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -302,7 +316,10 @@
                                     <p class="card-text"><strong>Author:</strong> H. Historian</p>
                                     <p class="card-text">Essays drawing from archival research about significant
                                         historical events.</p>
-                                    <a href="#" class="btn btn-sm btn-outline-primary mt-auto">More</a>
+                                    <div class="mt-auto d-flex gap-2">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">More</a>
+                                        <a href="#" class="btn btn-sm btn-danger" data-price="16.0">Buy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -391,6 +408,46 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./book.js"></script>
+    <!-- Book details modal -->
+    <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookModalLabel">Book Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="bookModalDesc" class="mb-0"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="modalBuyBtn" class="btn btn-danger">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Cart</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div id="cartItems" class="mb-3">
+                <!-- Items will be injected here -->
+            </div>
+            <div class="mt-auto">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <strong>Total:</strong>
+                    <strong id="cartTotal">$0.00</strong>
+                </div>
+                <div class="d-grid">
+                    <button id="checkoutBtn" class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
