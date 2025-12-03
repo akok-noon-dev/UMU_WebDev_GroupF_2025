@@ -1,94 +1,71 @@
-
-body{
-   /* background-image: url(./brown\ background.jpg);*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(192, 173, 149);
+/* GLOBAL STYLES */
+body {
+  font-family: 'Times New Roman', serif;
+  background-color: #f5f6fa;
+  color: #444;
+  line-height: 1.6;
 }
 
-.maindiv{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2%;
-
-
-}
-.carouselslide{
-padding: 2%;
-
-}
-.navbar:hover{
-    color: goldenrod;
-
-
-}
-.us{
-    
-    display: flex;
-    height: 10%;
-    
-    width: 60%;
-     justify-content: space-around;
-    margin-top: 2%;
-    border-radius: 5%;
-    margin-bottom: 5%;
-}
-.footer{
-display: flex;
-justify-content: space-around;
-text-emphasis-color: goldenrod;
-background-color: peachpuff;
-margin-top: 2%;
-
-
+.section-title {
+  color:  #3b1604;
 }
 
-.man{
-    flex-basis:36% ;
-    height:10%
-}
-.woman{
-    flex-basis:36% ;
-    height:10% ;
-    
+.highlight {
+  color:  #3b1604;
 }
 
-.card1{
-    flex-basis: 20%;
-    height: 20%;
+/* NAVIGATION BAR*/
+.main-header .navbar {
+  background-color:  #3b1604;
+}
 
+/* CAROUSELS */
+.carousel-img {
+  max-height: 500px;
+  object-fit: cover;
 }
-.card2{
-    flex-basis: 20%;
-     height: 20%;
 
+/* US SECTION*/
+.us ul {
+  list-style: none;
+  padding-left: 0;
 }
-.card3{
-flex-basis: 20% ;
-height:20% ;
 
+.us ul li {
+  margin-bottom: 10px;
 }
-.more{
 
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2%;
+/* MORE SECTION */
+.card-box {
+  width: 18rem;
+  margin: 0 auto;
 }
-.more1{
-    flex-basis:18% ;
-    margin-right:5% ;
-}
-.more2{
-    flex-basis:18% ;
-    margin-left:5% ;
-}
-.more3{
-    flex-basis:18% ;
-    margin-left:5% ;
-}
-#carouselExampleRide{
-    border-radius: 5%;
-    justify-content: space-around;
 
+/* SERVICES */
+.service-card {
+  background-color: #3b1604;
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #3b1604;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+}
+
+.footer a {
+  color: #cfdce6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* SIGN UP BUTTON */
+.signup-btn {
+  background-color: rgb(161, 126, 193);
 }
