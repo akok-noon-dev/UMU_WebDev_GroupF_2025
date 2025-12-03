@@ -1,0 +1,83 @@
+.main-div{
+    margin-left: 100px;
+    margin-top: 50px;
+    display: flex;
+    flex-basis: 25%;
+    justify-content: space-around;
+    
+
+    
+}
+.form{
+    padding: 10px;
+    border: black solid 1px;
+    background-color: #1f0a03;
+    border-radius: 10px;
+    color: white;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.second-div input{
+    width: 400px;
+    border-radius: 5px;
+    padding: 8px;
+}
+.second-div select,
+.second-div textarea {
+    width: 400px;
+}
+.second-div textarea{
+    border-radius: 10px;
+    padding: 8px;
+}
+.form-input {
+    display: block;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+.form-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+.form-input.input-error {
+    border-color: #f44336;
+    background-color: #ffebee;
+}
+.error-message {
+    display: block;
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: bold;
+}
+.third-div{
+    border: white 1px;
+    color: black;
+    border-radius: 10px;
+}
+.submit{
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.submit:hover {
+    background-color: darkgreen;
+}
+.submit:active {
+    transform: scale(0.98);
+}
+.footer{
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+}
+
