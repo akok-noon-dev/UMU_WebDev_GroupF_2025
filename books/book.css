@@ -1,123 +1,158 @@
+/* Custom styles for the Library Books Catalog - UPDATED FOR CARD LAYOUT */
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa;
-        }
-
-        /* Navbar Styles */
-        .main-header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1030;
-        }
-
-        .highlight-initial {
-            color: #CC1B00; /* UMU Red */
-            font-weight: bold;
-        }
-        
-        /* Spacing for fixed navbar */
-        .main-content-wrapper {
-            padding-top: 100px;
-            padding-bottom: 50px;
-        }
-
-        /* Carousel & Slide Styling */
-        .carousel {
-            margin-bottom: 4rem; /* Space between carousels */
-        }
-
-        .book-slide {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            height: 100%;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .book-description {
-            padding: 3rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .book-description h3 {
-            font-weight: 800;
-            color: #CC1B00;
-            margin-bottom: 0.5rem;
-            font-size: 1.75rem;
-        }
-
-        .book-description .author {
-            font-size: 1.1rem;
-            color: #6c757d;
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-
-        .book-cover {
-            height: 450px; /* Consistent height */
-            width: 100%;
-            object-fit: cover;
-        }
-
-        /* Section Headers */
-        .carousel-title {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            padding-left: 1rem;
-            border-left: 5px solid #CC1B00;
-            color: #212529;
-        }
-        
-        /* Footer Styles */
-        .footer {
-            background-color: #343a40;
-            color: #f8f9fa;
-            padding: 1.5rem 0;
-            border-top: 4px solid #CC1B00;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .book-cover { height: 300px; }
-            .book-description { padding: 1.5rem; }
-        }
-        .md\:w-1\/2 {
-    width: 50%;
-    padding: 34px;
-    margin: 12px;
-  }
-  /* Custom styles for the library book catalog */
-
-/* ... (other existing styles in your file) ... */
-
-/* New styles for the book content panes */
-.book-slide .book-content-pane {
-    /* The md:w-1/2 equivalent (approximately 49%) */
-    width: 49%; 
-    /* The fixed height to match your request */
-    height: 404px;
-    /* Padding and margin applied */
-    padding: 50px;
-    margin: 6px;
-    /* Ensuring the flex grow/shrink behavior is correct for the layout */
-    flex-shrink: 0;
-    flex-grow: 0;
+/* --- Base Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
 }
 
-/* Ensure the image container also conforms to the overall slide height */
-.book-slide .book-cover-pane {
-    width: 49%;
-    height: 404px;
-    margin: 6px; /* Apply margin for symmetry */
+/* --- Navbar Styles --- */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
 }
 
-.book-slide .book-cover-pane .book-cover {
+/* Ensure Navbar background is explicitly black and remove default border/shadows if any */
+.navbar {
+    background-color: #000000 !important; /* Explicitly black */
+    border-bottom: 3px solid #CC1B00; /* Add a subtle UMU red line at the bottom */
+}
+
+.highlight-initial {
+    color: #CC1B00; /* UMU Red */
+    font-weight: bold;
+}
+
+/* University Title Styling for better visibility on black background */
+.university-title h2 {
+    color: #ffffff !important; /* White text for the main title */
+}
+.university-title p {
+    color: #cccccc !important; /* Lighter grey for subtitle */
+}
+
+/* Navigation Links Styling */
+.navbar-nav .nav-link {
+    color: #f8f9fa !important; /* Light text for visibility */
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #CC1B00 !important; /* UMU Red on hover/active */
+    border-bottom: 2px solid #CC1B00;
+}
+
+/* Login Button Styling (already defined with inline style, but defining here for completeness) */
+.btn-login {
+    background-color: #CC1B00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #a31500; /* Darker red on hover */
+    color: white;
+}
+
+
+/* Spacing for fixed navbar */
+.main-content-wrapper {
+    /* Adjusted padding-top to account for the fixed header height */
+    padding-top: 130px; 
+    padding-bottom: 50px;
+}
+
+/* --- Card Styles (Replaces .book-slide and .book-description) --- */
+
+.book-card {
+    /* Centering is now handled by the #booksContainer flex layout (in HTML) */
+    /* Ensure card is responsive and maintains a 3/4 width approximation */
+    max-width: 900px; 
+    width: 100%;
+    
+    /* Hover effect transitions */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-card .row {
+    height: 100%; /* Ensure row fills the card */
+    margin: 0; /* Remove internal margin from the grid row */
+}
+
+/* Image Wrapper and Image */
+.book-image-wrapper {
+    /* Fixed height for a consistent look across cards */
+    min-height: 400px; 
+}
+
+.book-cover {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the space correctly */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
 }
+
+/* Text Content Styling (Replaces .book-description) */
+.book-card .col-md-6 {
+    padding: 2.5rem !important; /* Standardize padding for the content area */
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card h3 {
+    font-weight: 800;
+    color: #CC1B00;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+}
+
+.book-card .author {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* --- Footer Styles --- */
+.footer {
+    /* Changed from #343a40 to black */
+    background-color: #000000; 
+    color: #f8f9fa;
+    padding: 1.5rem 0;
+    border-top: 4px solid #CC1B00;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    /* On small screens, the two columns stack. */
+    .book-image-wrapper {
+        min-height: 250px; /* Smaller image height on mobile */
+    }
+    .book-card .col-md-6 {
+        padding: 1.5rem !important;
+    }
     
+    /* Remove border-radius on mobile when stacking to keep a rectangular shape */
+    .book-cover {
+        border-radius: 0 !important;
+    }
+    
+    /* Ensure rounded corners are only applied to the outer edges of the card */
+    .book-card .row:first-child .order-md-0 .book-cover {
+        border-top-left-radius: var(--bs-card-border-radius);
+        border-top-right-radius: var(--bs-card-border-radius);
+    }
+}
