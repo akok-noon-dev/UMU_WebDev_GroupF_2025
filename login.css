@@ -168,7 +168,7 @@ body {
 footer {
     width: 100%;
     text-align: center;
-    background: rgba(106, 164, 144, 0.75); /* semi-transparent */
+    background: rgba(106, 164, 144, 0.75); 
     color: #fff;
     padding: 8px 10px;
     margin-top: 40px;
