@@ -4,6 +4,11 @@
         alert('You selected: ' + card.querySelector('h3').innerText);
       });
     });
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
       // Inspirational quotes rotator
     const quotes = [
       'Knowledge is the key to unlocking your potential.',
