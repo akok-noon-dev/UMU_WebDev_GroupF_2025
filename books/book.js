@@ -85,3 +85,29 @@ function filterBooks() {
                 document.querySelector('.input-group button').addEventListener('click', filterBooks);
             }
         });
+ (function(){
+    const searchInput = document.getElementById('bookSearch');
+    const searchBtn = document.getElementById('searchBtn');
+    const overallMessage = document.getElementById('overallMessage');
+    // Simple client-side search by title/author in the DOM text
+    function filterBooks() {
+      const q = (searchInput && searchInput.value || '').toLowerCase().trim();
+      const cards = document.querySelectorAll('.book-card');
+      let shown = 0;
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        const col = card.closest('.col-lg-6') || card.closest('.col');
+        if (!q || text.includes(q)) {
+          if (col) col.style.display = '';
+          shown++;
+        } else {
+          if (col) col.style.display = 'none';
+        }
+      });
+      if (!q) overallMessage.innerHTML = 'Browse our full collection below.';
+      else if (shown) overallMessage.innerHTML = `<i class="fas fa-check-circle text-success me-1"></i>Showing ${shown} results for "${q}"`;
+      else overallMessage.innerHTML = `<i class="fas fa-exclamation-circle text-danger me-1"></i>No books found for "${q}"`;
+    }
+    if (searchInput) searchInput.addEventListener('input', filterBooks);
+    if (searchBtn) searchBtn.addEventListener('click', filterBooks);
+  })();

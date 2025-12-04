@@ -1,158 +1,283 @@
-/* Custom styles for the Library Books Catalog - UPDATED FOR CARD LAYOUT */
-
-/* --- Base Styles --- */
+/* ------------------- Base Styles ------------------- */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Lato', Arial, sans-serif;
+    background: linear-gradient(180deg, #f8f9fa, #e9ecef);
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* --- Navbar Styles --- */
+/* ------------------- Navbar ------------------- */
 .main-header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1030;
+    background: linear-gradient(90deg, #000000, #1a1a1a);
+    border-bottom: 3px solid #CC1B00;
 }
 
-/* Ensure Navbar background is explicitly black and remove default border/shadows if any */
-.navbar {
-    background-color: #000000 !important; /* Explicitly black */
-    border-bottom: 3px solid #CC1B00; /* Add a subtle UMU red line at the bottom */
+.navbar-brand img {
+    height: 65px;
+    width: 65px;
+}
+
+.university-title h2 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.university-title p {
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin: 0;
 }
 
 .highlight-initial {
-    color: #CC1B00; /* UMU Red */
-    font-weight: bold;
+    color: #CC1B00;
+    font-weight: 800;
 }
 
-/* University Title Styling for better visibility on black background */
-.university-title h2 {
-    color: #ffffff !important; /* White text for the main title */
-}
-.university-title p {
-    color: #cccccc !important; /* Lighter grey for subtitle */
-}
-
-/* Navigation Links Styling */
 .navbar-nav .nav-link {
-    color: #f8f9fa !important; /* Light text for visibility */
+    color: #f8f9fa;
+    margin: 0 0.6rem;
     font-weight: 500;
-    margin: 0 0.5rem;
-    transition: color 0.3s, border-bottom 0.3s;
+    transition: all 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #CC1B00 !important; /* UMU Red on hover/active */
+    color: #CC1B00;
     border-bottom: 2px solid #CC1B00;
 }
 
-/* Login Button Styling (already defined with inline style, but defining here for completeness) */
 .btn-login {
     background-color: #CC1B00;
     color: white;
     font-weight: bold;
-    border: none;
-    padding: 0.5rem 1.2rem;
-    border-radius: 0.3rem;
-    transition: background-color 0.3s;
+    padding: 0.5rem 1.3rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
 .btn-login:hover {
-    background-color: #a31500; /* Darker red on hover */
+    background-color: #a31500;
+    transform: scale(1.05);
+}
+
+/* ------------------- Page Content ------------------- */
+.page-content {
+    padding-top: 150px;
+}
+
+/* ------------------- Search Section ------------------- */
+.search-section {
+    padding: 60px 15px 40px;
+    background: linear-gradient(to right, #111, #222);
     color: white;
+    text-align: center;
 }
 
-
-/* Spacing for fixed navbar */
-.main-content-wrapper {
-    /* Adjusted padding-top to account for the fixed header height */
-    padding-top: 130px; 
-    padding-bottom: 50px;
+.search-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
 }
 
-/* --- Card Styles (Replaces .book-slide and .book-description) --- */
+.subtitle {
+    color: #ddd;
+    margin-bottom: 18px;
+}
 
+/* Search box */
+.search-box {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.search-box input {
+    border: none;
+    padding: 14px 18px;
+    flex: 1;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-maroon {
+    background: linear-gradient(135deg, #CC1B00, #a31500);
+    color: white;
+    padding: 0 26px;
+    border: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.28s ease;
+    cursor: pointer;
+}
+
+.btn-maroon:hover {
+    background: linear-gradient(135deg, #a31500, #7d0f00);
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* add subtle focus ring for accessibility */
+.search-box input:focus {
+    box-shadow: inset 0 0 0 2px rgba(204,27,0,0.08);
+}
+
+/* ------------------- Divider ------------------- */
+.section-divider {
+    border-top: 3px solid #CC1B00;
+    margin: 0;
+}
+
+/* ------------------- Books Section ------------------- */
+.books-section {
+    background-color: #f4f4f4;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+/* Book card layout */
 .book-card {
-    /* Centering is now handled by the #booksContainer flex layout (in HTML) */
-    /* Ensure card is responsive and maintains a 3/4 width approximation */
-    max-width: 900px; 
-    width: 100%;
-    
-    /* Hover effect transitions */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+    min-height: 360px;
+    display: flex;
+    align-items: stretch;
 }
 
 .book-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.22);
 }
 
-.book-card .row {
-    height: 100%; /* Ensure row fills the card */
-    margin: 0; /* Remove internal margin from the grid row */
-}
+/* Alternate layout for variety on large screens */
+.book-card:nth-child(even) .row { flex-direction: row-reverse; }
 
-/* Image Wrapper and Image */
+/* Image wrapper */
 .book-image-wrapper {
-    /* Fixed height for a consistent look across cards */
-    min-height: 400px; 
+    flex: 1;
+    min-width: 260px;
+    max-width: 360px;
+    height: 100%;
+    overflow: hidden;
 }
 
 .book-cover {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the space without distortion */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
-/* Text Content Styling (Replaces .book-description) */
+.book-card:hover .book-cover {
+    transform: scale(1.05);
+}
+
+/* Content area */
 .book-card .col-md-6 {
-    padding: 2.5rem !important; /* Standardize padding for the content area */
+    flex: 2;
+    padding: 28px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .book-card h3 {
-    font-weight: 800;
+    font-size: 1.6rem;
     color: #CC1B00;
-    margin-bottom: 0.5rem;
-    font-size: 1.75rem;
+    margin-bottom: 10px;
 }
 
 .book-card .author {
-    font-size: 1.1rem;
-    color: #6c757d;
-    margin-bottom: 1rem;
     font-style: italic;
+    color: #6c757d;
+    margin-bottom: 12px;
 }
 
-/* --- Footer Styles --- */
+.book-card p {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.book-card a.btn {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #CC1B00, #a31500);
+    padding: 10px 18px;
+    border-radius: 30px;
+    width: fit-content;
+    transition: all 0.25s ease;
+}
+
+.book-card a.btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #a31500, #7d0f00);
+}
+
+/* ------------------- Footer ------------------- */
 .footer {
-    /* Changed from #343a40 to black */
-    background-color: #000000; 
+    background-color: #000;
     color: #f8f9fa;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
+    text-align: center;
     border-top: 4px solid #CC1B00;
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
-    /* On small screens, the two columns stack. */
+.footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* ------------------- Responsive ------------------- */
+@media (max-width: 992px) {
+    .book-card {
+        flex-direction: column;
+        min-height: auto;
+    }
+
     .book-image-wrapper {
-        min-height: 250px; /* Smaller image height on mobile */
+        height: 260px;
+        max-width: 100%;
     }
+
     .book-card .col-md-6 {
-        padding: 1.5rem !important;
+        padding: 18px;
     }
-    
-    /* Remove border-radius on mobile when stacking to keep a rectangular shape */
-    .book-cover {
-        border-radius: 0 !important;
+
+    .main-header {
+        position: relative;
     }
-    
-    /* Ensure rounded corners are only applied to the outer edges of the card */
-    .book-card .row:first-child .order-md-0 .book-cover {
-        border-top-left-radius: var(--bs-card-border-radius);
-        border-top-right-radius: var(--bs-card-border-radius);
+}
+
+@media (max-width: 576px) {
+    .search-box input {
+        font-size: 0.95rem;
+        padding: 12px 14px;
+    }
+
+    .btn-maroon {
+        padding: 0 18px;
+        font-size: 1rem;
+    }
+
+    .book-card h3 {
+        font-size: 1.25rem;
     }
 }
