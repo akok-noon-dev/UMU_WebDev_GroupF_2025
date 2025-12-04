@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fdf6f0; /* soft cream background for contrast */
+    background-color: #fdf6f0; 
     color: #333;
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 .card {
-    background-color: #fdf6f0; /* cream background for cards */
+    background-color: #fdf6f0; 
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     padding: 20px;
