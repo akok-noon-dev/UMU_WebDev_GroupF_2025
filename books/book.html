@@ -3,332 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>library categories</title>
+    <title>Library Books Catalog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="./categories/cat.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-    <style>
-        /* Define the dark red color for the wrapper (matching the LOGIN button's #CC1B00) */
-        .dark-red-wrapper {
-            background-color: #CC1B00; /* Dark red background */
-            padding: 15px; /* Add some padding inside the wrapper */
-            border-radius: 0.375rem; /* Match Bootstrap's card border-radius */
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7) !important; /* Thick, dark box shadow */
-            transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
-        }
-        
-        /* Hover effect: lift the card and slightly darken the shadow */
-        .dark-red-wrapper:hover {
-            transform: translateY(-5px); /* Lift the card slightly */
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9) !important; /* Thicker shadow on hover */
-        }
-
-        /* Ensure the inner card and book list links stand out against the dark red background */
-        .dark-red-wrapper .card-body .card-title,
-        .dark-red-wrapper .card-body .card-text,
-        .dark-red-wrapper .card-body .category-book-list a {
-            color: white !important; /* Make text white for contrast */
-        }
-
-        /* Adjust the inner card style if necessary (e.g., to have no background or a transparent one) */
-        .dark-red-wrapper .card {
-            background-color: transparent !important; /* Make inner card transparent */
-            border: none; /* Remove border for a cleaner look inside the wrapper */
-        }
-
-        /* Adjust the list items inside the wrapper */
-        .dark-red-wrapper .category-book-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        /* Style the carousel to stand out */
-        .dark-red-wrapper .carousel {
-            border-radius: 0.375rem; /* Match card radius */
-            overflow: hidden; /* Ensure image fits well */
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./books/book.css">
 </head>
 <body>
     <header class="main-header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container">
-
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="../images/umu logo.png" alt="UMU Logo" style="height: 70px; width: 70px;" class="me-2">
+                    <img src="https://placehold.co/70x70/000000/ffffff?text=UMU" alt="UMU Logo" style="height: 70px; width: 70px;" class="me-2 rounded-full border-2 border-[#CC1B00]">
                 </a>
-
                 <div class="university-title d-none d-lg-block me-4">
-                    <h2 class="mb-0 text-light">
-                        <span class="highlight-initial">U</span>ganda
-                        <span class="highlight-initial">M</span>artyrs
-                        <span class="highlight-initial">U</span>niversity
-                    </h2>
+                    <h2 class="mb-0 text-light"><span class="highlight-initial">U</span>ganda <span class="highlight-initial">M</span>artyrs <span class="highlight-initial">U</span>niversity</h2>
                     <p class="mb-0 text-light" style="font-size: 0.9rem;">Digital Library System</p>
                 </div>
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./books/book.html"><i class="fas fa-book-open me-1"></i> Books</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./categories/cat.html"><i class="fas fa-sitemap me-1"></i> Categories</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i> About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html"><i class="fas fa-phone me-1"></i> Contact</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./book.html"><i class="fas fa-book-open me-1"></i> Books</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../categories/cat.html"><i class="fas fa-sitemap me-1"></i> Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about.html"><i class="fas fa-info-circle me-1"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contact.html"><i class="fas fa-phone me-1"></i> Contact</a></li>
                     </ul>
-
                     <div class="d-flex">
-                        <a href="login.html" class="btn btn-login" style="background-color: #CC1B00; color:white;">
-                            <i class="fas fa-sign-in-alt me-1"></i> LOGIN
-                        </a>
+                        <a href="../login.html" class="btn btn-login" style="background-color: #CC1B00; color:white;"><i class="fas fa-sign-in-alt me-1"></i> LOGIN</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <br>
+    <div class="container main-content-wrapper">
+        <div class="py-5 text-center">
+            <h1 class="fw-bold text-4xl mb-3">Library Collections</h1>
+            <p id="overallMessage" class="text-muted text-lg">Browse our curated selections across three distinct categories.</p>
+        </div>
 
-    <main class="pt-5 mt-5">
-        <section class="container py-5 categories-page">
-            <div class="row mb-4">
-                <div class="col-12 text-center">
-                    <h1 class="fw-bold">Book Categories</h1>
-                    <p class="text-muted">Explore collections grouped by type — from Fiction to Science and more.</p>
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <div class="input-group shadow-md rounded-lg overflow-hidden border border-gray-300">
+                    <input type="text" id="bookSearch" class="form-control p-3 border-0 focus:ring-0" placeholder="Search for a book title or author..." aria-label="Search Books">
+                    <button class="btn text-white px-4 hover:bg-red-700 transition duration-300" type="button" style="background-color: #CC1B00;">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
             </div>
-
-            <div class="row g-4">
-                <div class="col-sm-6 col-md-4">
-                    <div class="dark-red-wrapper">
-                        <div class="card h-100 shadow-sm">
-                            <div id="carouselFiction" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="../images/hobbit.jpg" class="d-block w-100" alt="Fiction - Hobbit">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/The-Great-Gatsby.png" class="d-block w-100" alt="Fiction - The Great Gatsby">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/pride and prejudice.jpeg" class="d-block w-100" alt="Fiction - Pride and Prejudice">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/to kill a mocking bird.jpg" class="d-block w-100" alt="Fiction - To Kill A Mockingbird">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFiction" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselFiction" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-feather-alt me-2"></i>Fiction</h5>
-                                <p class="card-text">Novels, Short Stories, and Literary Fiction for every reader.</p>
-                                <ul class="category-book-list">
-                                    <li><a href="../books/book.html?category=fiction&book=the-hobbit">The Hobbit</a></li>
-                                    <li><a href="../books/book.html?category=fiction&book=the-great-gatsby">The Great Gatsby</a></li>
-                                    <li><a href="../books/book.html?category=fiction&book=pride-and-prejudice">Pride and Prejudice</a></li>
-                                    <li><a href="../books/book.html?category=fiction&book=to-kill-a-mockingbird">To Kill a Mockingbird</a></li>
-                                </ul>
-                                <a href="../books/book.html?category=fiction" class="btn btn-outline-light mt-auto">View Books</a>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="dark-red-wrapper">
-                        <div class="card h-100 shadow-sm">
-                            <div id="carouselNonFiction" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="../images/bk1.jpg" class="d-block w-100" alt="Non-Fiction">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/bk10.jpg" class="d-block w-100" alt="Non-Fiction">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/bk11.jpg" class="d-block w-100" alt="Non-Fiction">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselNonFiction" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselNonFiction" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-scroll me-2"></i>Non-Fiction</h5>
-                                <p class="card-text">Biographies, Essays, Memoirs, and other factual reads.</p>
-                                <ul class="category-book-list">
-                                    <li><a href="../books/book.html?category=nonfiction&book=sapiens">Sapiens</a></li>
-                                    <li><a href="../books/book.html?category=nonfiction&book=educated">Educated</a></li>
-                                    <li><a href="../books/book.html?category=nonfiction&book=the-diary-of-a-young-girl">The Diary of a Young Girl</a></li>
-                                    <li><a href="../books/book.html?category=nonfiction&book=the-right-stuff">The Right Stuff</a></li>
-                                </ul>
-                                <a href="../books/book.html?category=nonfiction" class="btn btn-outline-light mt-auto">View Books</a>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="dark-red-wrapper">
-                        <div class="card h-100 shadow-sm">
-                            <div id="carouselScience" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="../images/javascript.jpg" class="d-block w-100" alt="Science & Technology">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/bk5.jpg" class="d-block w-100" alt="Science & Technology">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/bk9.jpg" class="d-block w-100" alt="Science & Technology">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselScience" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselScience" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-flask me-2"></i>Science & Technology</h5>
-                                <p class="card-text">STEM resources including programming, engineering, and applied sciences.</p>
-                                <ul class="category-book-list">
-                                    <li><a href="../books/book.html?category=science&book=javascript-the-good-parts">JavaScript: The Good Parts</a></li>
-                                    <li><a href="../books/book.html?category=science&book=a-brief-history-of-time">A Brief History of Time</a></li>
-                                    <li><a href="../books/book.html?category=science&book=the-selfish-gene">The Selfish Gene</a></li>
-                                    <li><a href="../books/book.html?category=science&book=clean-code">Clean Code</a></li>
-                                </ul>
-                                <a href="../books/book.html?category=science" class="btn btn-outline-light mt-auto">View Books</a>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="dark-red-wrapper">
-                        <div class="card h-100 shadow-sm">
-                            <div id="carouselHistory" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="../images/1984.jpg" class="d-block w-100" alt="History - 1984">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/bk6.jpg" class="d-block w-100" alt="History">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/bk12.jpg" class="d-block w-100" alt="History">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHistory" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselHistory" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-landmark me-2"></i>History</h5>
-                                <p class="card-text">World history, local histories, and reference materials chronicling the past.</p>
-                                <ul class="category-book-list">
-                                    <li><a href="../books/book.html?category=history&book=1984">1984</a></li>
-                                    <li><a href="../books/book.html?category=history&book=guns-germs-and-steel">Guns, Germs, and Steel</a></li>
-                                    <li><a href="../books/book.html?category=history&book=the-silk-roads">The Silk Roads</a></li>
-                                    <li><a href="../books/book.html?category=history&book=team-of-rivals">Team of Rivals</a></li>
-                                </ul>
-                                <a href="../books/book.html?category=history" class="btn btn-outline-light mt-auto">View Books</a>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="dark-red-wrapper">
-                        <div class="card h-100 shadow-sm">
-                            <div id="carouselChildren" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="../images/bk7.jpg" class="d-block w-100" alt="Children's">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/bk8.jpg" class="d-block w-100" alt="Children's">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/bk13.jpg" class="d-block w-100" alt="Children's">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselChildren" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselChildren" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-child me-2"></i>Children's Books</h5>
-                                <p class="card-text">Picture books, early readers, and educational titles for children.</p>
-                                <ul class="category-book-list">
-                                    <li><a href="../books/book.html?category=children&book=where-the-wild-things-are">Where the Wild Things Are</a></li>
-                                    <li><a href="../books/book.html?category=children&book=charlottes-web">Charlotte's Web</a></li>
-                                    <li><a href="../books/book.html?category=children&book=cat-in-the-hat">The Cat in the Hat</a></li>
-                                    <li><a href="../books/book.html?category=children&book=harry-potter-1">Harry Potter and the Philosopher's Stone</a></li>
-                                </ul>
-                                <a href="../books/book.html?category=children" class="btn btn-outline-light mt-auto">View Books</a>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+        </div>
+        <h2 class="carousel-title" id="titleTop">1. Featured Classics & Essentials</h2>
+        <div id="carouselTop" class="carousel slide shadow-xl" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselTop" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselTop" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselTop" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselTop" data-bs-slide-to="3"></button>
             </div>
-        </section>
-    </main>
+            <div class="carousel-inner" data-carousel-id="Top">
+                <div class="carousel-item active" data-title="1984" data-author="George Orwell">
+                    <div class="book-slide d-flex">
+                        <div class="book-cover-pane">
+                            <img src="./images/1984.jpg" class="book-cover" alt="Cover of 1984 by George Orwell">
+                        </div>
+                        <div class="book-content-pane book-description">
+                            <h3>1984</h3>
+                            <p class="author">By George Orwell</p>
+                            <p class="text-gray-600">A chilling dystopian novel set in a totalitarian state where thought is controlled by the Party. It is a powerful warning about the dangers of unchecked political power and mass surveillance. A key text for political science and literature studies.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-title="Brave New World" data-author="Aldous Huxley">
+                    <div class="book-slide d-flex">
+                        <div class="book-cover-pane">
+                            <img src="./images/brave new world.jpg" class="book-cover" alt="Cover of Brave New World by Aldous Huxley">
+                        </div>
+                        <div class="book-content-pane book-description">
+                            <h3>Brave New World</h3>
+                            <p class="author">By Aldous Huxley</p>
+                            <p class="text-gray-600">A satirical and futuristic novel presenting a society obsessed with technology, stability, and control through genetic engineering and conditioning. This classic challenges readers to consider the costs of technological progress and superficial happiness.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-title="Deep Work" data-author="Cal Newport">
+                    <div class="book-slide d-flex">
+                        <div class="book-cover-pane">
+                            <img src="./images/deep work.jpg" class="book-cover" alt="Cover of Deep Work by Cal Newport">
+                        </div>
+                        <div class="book-content-pane book-description">
+                            <h3>Deep Work: Rules for Focused Success in a Distracted World</h3>
+                            <p class="author">By Cal Newport</p>
+                            <p class="text-gray-600">This book argues that the ability to concentrate without distraction on a cognitively demanding task is crucial for success. It provides actionable rules for cultivating this skill and achieving profound professional results in the modern economy.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-title="The Hobbit" data-author="J.R.R. Tolkien">
+                    <div class="book-slide d-flex">
+                        <div class="book-cover-pane">
+                            <img src="./images/hobbit.jpg" class="book-cover" alt="Cover of The Hobbit by J.R.R. Tolkien">
+                        </div>
+                        <div class="book-content-pane book-description">
+                            <h3>The Hobbit</h3>
+                            <p class="author">By J.R.R. Tolkien</p>
+                            <p class="text-gray-600">Follow Bilbo Baggins on his unexpected journey from comfortable hobbit life to an epic quest for dragon's treasure. A classic high fantasy novel for all ages that introduces readers to the rich world of Middle-earth.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTop" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-black rounded-full p-3"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTop" data-bs-slide="next"><span class="carousel-control-next-icon bg-black rounded-full p-3"></span></button>
+        </div>
+
+        <h2 class="carousel-title mt-5" id="titleMiddle">2. Academic & Professional</h2>
+        <div id="carouselMiddle" class="carousel slide shadow-xl" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselMiddle" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselMiddle" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselMiddle" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselMiddle" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner" data-carousel-id="Middle">
+                <div class="carousel-item active" data-title="Eloquent Javascript" data-author="Marijn Haverbeke">
+                    <div class="book-slide d-flex flex-row-reverse">
+                        <div class="book-cover-pane">
+                            <img src="./images/javascript.jpg" class="book-cover" alt="Cover of Eloquent Javascript by Marijn Haverbeke">
+                        </div>
+                        <div class="book-content-pane book-description text-end-md">
+                            <h3>Eloquent JavaScript: A Modern Introduction to Programming</h3>
+                            <p class="author">By Marijn Haverbeke</p>
+                            <p class="text-gray-600">A comprehensive guide for learning the JavaScript programming language and how to write elegant, effective code. It covers the fundamentals of the language, browser programming, and Node.js. Essential reading for Computer Science students.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-title="Michelle Obama: Becoming" data-author="Michelle Obama">
+                    <div class="book-slide d-flex flex-row-reverse">
+                        <div class="book-cover-pane">
+                            <img src="./images/michelle obama.jpg" class="book-cover" alt="Cover of Becoming by Michelle Obama">
+                        </div>
+                        <div class="book-content-pane book-description text-end-md">
+                            <h3>Becoming</h3>
+                            <p class="author">By Michelle Obama</p>
+                            <p class="text-gray-600">An intimate memoir by the former First Lady of the United States. She shares her journey from a childhood on the South Side of Chicago to her years in the White House. A powerful and inspiring story of resilience and self-discovery.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-title="Rich Dad Poor Dad" data-author="Robert Kiyosaki">
+                    <div class="book-slide d-flex flex-row-reverse">
+                        <div class="book-cover-pane">
+                            <img src="./images/rich dad poor dad.jpg" class="book-cover" alt="Cover of Rich Dad Poor Dad by Robert Kiyosaki">
+                        </div>
+                        <div class="book-content-pane book-description text-end-md">
+                            <h3>Rich Dad Poor Dad</h3>
+                            <p class="author">By Robert Kiyosaki</p>
+                            <p class="text-gray-600">A personal finance classic that challenges conventional wisdom about money. It emphasizes the importance of financial literacy, building assets, and entrepreneurial thinking. Essential reading for Business and Finance students.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-title="The Hard Thing About Hard Things" data-author="Ben Horowitz">
+                    <div class="book-slide d-flex flex-row-reverse">
+                        <div class="book-cover-pane">
+                            <img src="./images/the hard thing about hard things.jpg" class="book-cover" alt="Cover of The Hard Thing About Hard Things by Ben Horowitz">
+                        </div>
+                        <div class="book-content-pane book-description text-end-md">
+                            <h3>The Hard Thing About Hard Things</h3>
+                            <p class="author">By Ben Horowitz</p>
+                            <p class="text-gray-600">A guide to building and running a startup, focusing on the difficult, often overlooked aspects of management. Horowitz offers practical wisdom and raw honesty on leadership, crisis management, and the emotional challenges of being a CEO.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMiddle" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-black rounded-full p-3"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMiddle" data-bs-slide="next"><span class="carousel-control-next-icon bg-black rounded-full p-3"></span></button>
+        </div>
+
+        <h2 class="carousel-title mt-5" id="titleBottom">3. Specialized Studies & Literature</h2>
+        <div id="carouselBottom" class="carousel slide shadow-xl" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselBottom" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselBottom" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselBottom" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselBottom" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner" data-carousel-id="Bottom">
+                <div class="carousel-item active" data-title="Moby Dick" data-author="Herman Melville">
+                    <div class="book-slide d-flex">
+                        <div class="book-cover-pane">
+                            <img src="./images/moby dick.jpg" class="book-cover" alt="Cover of Moby Dick by Herman Melville">
+                        </div>
+                        <div class="book-content-pane book-description">
+                            <h3>Moby-Dick; or, The Whale</h3>
+                            <p class="author">By Herman Melville</p>
+                            <p class="text-gray-600">This American literary classic tells the obsessive quest of Captain Ahab to hunt a white sperm whale, Moby Dick. It is a profound meditation on obsession, fate, and the complex relationship between humanity and nature.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-title="Pride and Prejudice" data-author="Jane Austen">
+                    <div class="book-slide d-flex">
+                        <div class="book-cover-pane">
+                            <img src="./images/pride and prejudice.jpg" class="book-cover" alt="Cover of Pride and Prejudice by Jane Austen">
+                        </div>
+                        <div class="book-content-pane book-description">
+                            <h3>Pride and Prejudice</h3>
+                            <p class="author">By Jane Austen</p>
+                            <p class="text-gray-600">A romantic novel of manners written in 1813, following the story of Elizabeth Bennet and her family. It critiques the English gentry's customs and education, emphasizing social standing and marriage in the 19th century.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-title="The History of Philosophy" data-author="A.C. Grayling">
+                    <div class="book-slide d-flex">
+                        <div class="book-cover-pane">
+                            <img src="./images/the history of philosophy.jpg" class="book-cover" alt="Cover of The History of Philosophy by A.C. Grayling">
+                        </div>
+                        <div class="book-content-pane book-description">
+                            <h3>The History of Philosophy</h3>
+                            <p class="author">By A.C. Grayling</p>
+                            <p class="text-gray-600">A comprehensive survey of philosophical thought from the ancient world to the modern day. It covers key thinkers, schools, and concepts across Western, Indian, and Chinese traditions. Excellent for all Philosophy and Humanities students.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-title="The Lost Fifty Seven" data-author="Ian Williams">
+                    <div class="book-slide d-flex">
+                        <div class="book-cover-pane">
+                            <img src="./images/the lost fifty seven.jpg" class="book-cover" alt="Cover of The Lost Fifty Seven by Ian Williams">
+                        </div>
+                        <div class="book-content-pane book-description">
+                            <h3>The Lost Fifty-Seven: A Story of an Unfinished Life</h3>
+                            <p class="author">By Ian Williams</p>
+                            <p class="text-gray-600">A compelling narrative that explores loss, memory, and the search for identity. This book uses a blend of memoir and fiction to delve into personal history and the universal themes of grief and remembrance. A powerful piece of contemporary literature.</p>
+                            <a href="#" class="btn text-white mt-4 w-fit hover:bg-red-800" style="background-color: #CC1B00;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBottom" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-black rounded-full p-3"></span></button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBottom" data-bs-slide="next"><span class="carousel-control-next-icon bg-black rounded-full p-3"></span></button>
+        </div>
+
+    </div>
+
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content text-center">
                 <p>&copy; home page created by MUGENYI DULTON -2025-B291-14579. All rights reserved.</p>
                 <div class="student-details">
-                    </strong> [MUGENYI DULTON -2025-B291-14579]</p> </strong>stud. No. 2500504579</p>
+                    <p><strong>Student No.:</strong> 2500504579</p>
                     <p><strong>Project:</strong> Interactive Multi-Page Website - UMU Web Development Examination</p>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./cat.js"></script>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('bookSearch');
+        const allItems = document.querySelectorAll('.carousel-item');
+        const overallMessage = document.getElementById('overallMessage');
+        const carousels = document.querySelectorAll('.carousel');
+        const carouselTitles = document.querySelectorAll('.carousel-title');
+
+        searchInput.addEventListener('keyup', function() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            let foundCount = 0;
+
+            allItems.forEach(item => {
+                const title = item.getAttribute('data-title').toLowerCase();
+                const author = item.getAttribute('data-author').toLowerCase();
+
+                // Check if the search term is found in the title or author
+                if (title.includes(searchTerm) || author.includes(searchTerm)) {
+                    item.style.display = ''; // Show the item
+                    foundCount++;
+                } else {
+                    item.style.display = 'none'; // Hide the item
+                }
+            });
+
+            // Handle visibility of carousels and indicators based on filter results
+            carousels.forEach(carousel => {
+                const inner = carousel.querySelector('.carousel-inner');
+                const title = document.getElementById(carousel.id.replace('carousel', 'title'));
+                const visibleItems = inner.querySelectorAll('.carousel-item:not([style*="display: none"])');
+                
+                if (visibleItems.length > 0) {
+                    carousel.style.display = '';
+                    if (title) title.style.display = '';
+                    
+                    // Reset active class for remaining visible items in the carousel
+                    visibleItems.forEach((item, index) => {
+                        item.classList.remove('active');
+                        if (index === 0) {
+                            item.classList.add('active'); // Set the first visible item as active
+                        }
+                    });
+
+                } else {
+                    carousel.style.display = 'none';
+                    if (title) title.style.display = 'none';
+                }
+            });
+
+            // Update the overall message
+            if (searchTerm === '') {
+                overallMessage.textContent = 'Browse our curated selections across three distinct categories.';
+                
+                // Ensure all items are visible and the first is active when cleared
+                allItems.forEach(item => {
+                    item.style.display = '';
+                    item.classList.remove('active');
+                });
+
+                // Re-enable carousel controls/titles
+                carousels.forEach(carousel => {
+                    carousel.style.display = '';
+                });
+                carouselTitles.forEach(title => {
+                    title.style.display = '';
+                });
+
+                // Re-set initial active slides for each carousel by targeting the first item
+                document.querySelector('#carouselTop .carousel-item').classList.add('active');
+                document.querySelector('#carouselMiddle .carousel-item').classList.add('active');
+                document.querySelector('#carouselBottom .carousel-item').classList.add('active');
+
+            } else if (foundCount > 0) {
+                overallMessage.textContent = `Showing ${foundCount} results for "${searchTerm}".`;
+            } else {
+                overallMessage.textContent = `No results found for "${searchTerm}". Please try a different title or author.`;
+            }
+        });
+    });
+    </script>
+</body>
 </html>
