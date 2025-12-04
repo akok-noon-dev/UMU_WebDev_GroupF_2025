@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CONTACT US</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<!-- UMU NAVBAR  -->
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./images/umu logo.png" alt="UMU Logo" style="height: 70px; width: 70px;" class="me-2">
+            </a>
+
+            <div class="university-title d-none d-lg-block me-4">
+                <h2 class="mb-0 text-light">
+                    <span class="highlight-initial">U</span>ganda
+                    <span class="highlight-initial">M</span>artyrs
+                    <span class="highlight-initial">U</span>niversity
+                </h2>
+                <p class="mb-0 text-light" style="font-size: 0.9rem;">Digital Library System</p>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="books/book.html"><i class="fas fa-book me-1"></i> Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html"><i class="fas fa-list me-1"></i> Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-login" style="background-color: #CC1B00; color:white;">
+                        <i class="fas fa-sign-in-alt me-1"></i> LOGIN
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- END NAVBAR -->
+
+
+<!-- ✅ PAGE TITLE -->
+<h1 class="main-title">GET IN TOUCH WITH US</h1>
+<hr>
+
+
+<!-- ✅ MAIN CONTENT -->
+<div class="main-div">
+
+    <!-- ✅ SOCIAL MEDIA SECTION -->
+    <div class="third-div">
+        <center>
+            <h2 class="social-title"><i>OUR SOCIAL MEDIA PLATFORMS</i></h2>
+            <hr>
+            <i class="bi bi-whatsapp"></i> WHATSAPP
+            <p>+256 (0) 704542018<br>+256 (0) 782730579</p>
+            <hr>
+
+            <i class="bi bi-envelope-at-fill"></i> EMAIL
+            <p>umuelibrary@gmail.com</p>
+            <hr>
+
+            <i class="bi bi-instagram"></i> INSTAGRAM
+            <p>umu elibrary</p>
+            <hr>
+
+            <i class="bi bi-geo-alt-fill"></i> LOCATION
+            <p>Uganda Martyrs University IT Department opposite the Auditorium</p>
+            <hr>
+
+            <i class="bi bi-calendar"></i> WORKING TIMEFRAME
+            <p>24/7</p>
+            <hr>
+
+            <i class="bi bi-twitter-x"></i> TWITTER
+            <p>Umu elibrary</p>
+        </center>
+    </div>
+
+
+    <!-- CONTACT FORM -->
+    <div class="form">
+        <h2 class="form-title">CONTACT US</h2>
+
+        <form id="userform" novalidate>
+
+            <div class="form-group">
+                <label>FIRST NAME</label>
+                <input type="text" id="firstname" class="form-input" required>
+                <span class="error-message" id="firstname-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label>LAST NAME</label>
+                <input type="text" id="lastname" class="form-input" required>
+                <span class="error-message" id="lastname-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label>EMAIL</label>
+                <input type="email" id="email" class="form-input" required>
+                <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label>TEL</label>
+                <input type="tel" id="tel" class="form-input" required>
+                <span class="error-message" id="tel-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label>IDENTITY</label>
+                <select id="identity" class="form-input" required>
+                    <option value="">-- Select an option --</option>
+                    <option value="student">STUDENT</option>
+                    <option value="staffmember">STAFF MEMBER</option>
+                    <option value="other">OTHER</option>
+                </select>
+                <span class="error-message" id="identity-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label>MESSAGE US</label>
+                <textarea id="usermessage" rows="4" class="form-input"></textarea>
+                <span class="error-message" id="usermessage-error"></span>
+            </div>
+
+            <center>
+                <button type="submit" class="submit">Submit</button>
+            </center>
+
+            <p id="message" class="form-message"></p>
+
+        </form>
+    </div>
+
+</div>
+
+<hr>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <center>
+        Katende JORAM-PAUL<br>
+        2025-B071-10973<br>
+        jorampaulkatende6@gmail.com<br>
+        BSIT
+    </center>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="contact.js"></script>
+
+</body>
+</html>

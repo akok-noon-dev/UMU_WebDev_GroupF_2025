@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-   // Inject only the requested Ken Burns keyframes into the page (no other changes)
+   // Ken Burns keyframes 
 (function injectKenBurnsKeyframes() {
     const css = `
 /* KEN BURNS ANIMATION */
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
-    // Add hover effects to feature cards
+    // hover effects to feature cards
     const featureCards = document.querySelectorAll('.feature-card');
     featureCards.forEach(card => {
         card.addEventListener('mouseenter', function() {

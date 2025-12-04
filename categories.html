@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMU Library - Categories</title>
+    <link rel="stylesheet" href="categories.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="navbar-container">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/umu logo.png" alt="UMU Logo">
+            </a>
+            <div class="university-name">
+                <h2>Uganda Martyrs University</h2>
+                <p>Digital Library System</p>
+            </div>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="books/book.html"><i class="fas fa-book"></i> Books</a></li>
+            <li><a class="active" href="categories.html"><i class="fas fa-list"></i> Categories</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+
+        <a href="login.html" class="btn-login"><i class="fas fa-sign-in-alt"></i> LOGIN</a>
+        <span class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></span>
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>UMU Library</h1>
+    <p class="subtitle">Browse our diverse collection by category</p>
+</section>
+
+<section class="categories-section">
+    <h2 class="section-title">Book Categories</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="./images/science.jpeg" alt="Science & Technology">
+            <h3>Science & Technology</h3>
+            <p>Books covering physics, chemistry, biology, engineering, and emerging technologies.</p>
+            <a href="books/book.html" class="btn-card">Explore</a>
+        </div>
+
+        <div class="card">
+            <img src="./images/humanities.jpeg" alt="Humanities">
+            <h3>Humanities</h3>
+            <p>Philosophy, literature, history, languages, and cultural studies materials.</p>
+            <a href="books/book.html" class="btn-card">Explore</a>
+        </div>
+
+        <div class="card">
+            <img src="./images/social.jpeg" alt="Social Sciences">
+            <h3>Social Sciences</h3>
+            <p>Political science, sociology, psychology, anthropology, and related fields.</p>
+            <a href="books/book.html" class="btn-card">Explore</a>
+        </div>
+
+        <div class="card">
+            <img src="./images/economics.jpeg" alt="Business & Economics">
+            <h3>Business & Economics</h3>
+            <p>Texts on finance, management, accounting, entrepreneurship, and economics.</p>
+            <a href="books/book.html" class="btn-card">Explore</a>
+        </div>
+
+        <div class="card">
+            <img src="./images/law.jpeg" alt="Law">
+            <h3>Law</h3>
+            <p>Constitutional law, criminal law, international law, legal cases, and statutes.</p>
+            <a href="books/book.html" class="btn-card">Explore</a>
+        </div>
+
+        <div class="card">
+            <img src="./images/Health.webp" alt="Health Sciences">
+            <h3>Health Sciences</h3>
+            <p>Medicine, nursing, public health, pharmacy, and medical research texts.</p>
+            <a href="books/book.html" class="btn-card">Explore</a>
+        </div>
+
+        <div class="card">
+            <img src="./images/computer.jpg" alt="ICT & Computer Science">
+            <h3>ICT & Computer Science</h3>
+            <p>Programming, networking, cybersecurity, and information systems resources.</p>
+            <a href="books/book.html" class="btn-card">Explore</a>
+        </div>
+
+        <div class="card">
+            <img src="./images/research.jpeg" alt="Research & Publications">
+            <h3>Research & Publications</h3>
+            <p>Theses, dissertations, academic journals, and institutional publications.</p>
+            <a href="books/book.html" class="btn-card">Explore</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 UGANDA MARTYRS UNIVERSITY. All Rights Reserved.</p>
+    <p>CREATED BY SSEKADDE ERIC 2025-B221-12877 | STUD. NO 2500502877</p>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

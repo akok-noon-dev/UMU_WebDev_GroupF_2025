@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Library Login Portal</title>
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<!--NAVBAR -->
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="login.html">
+                <img src="./images/umu logo.png" alt="UMU Logo" style="height: 70px; width: 70px;" class="me-2">
+            </a>
+
+            <!-- University Title -->
+            <div class="university-title d-none d-lg-block me-4">
+                <h2 class="mb-0 text-light">
+                    <span class="highlight-initial">U</span>ganda
+                    <span class="highlight-initial">M</span>artyrs
+                    <span class="highlight-initial">U</span>niversity
+                </h2>
+                <p class="mb-0 text-light" style="font-size: 0.9rem;">Digital Library System</p>
+            </div>
+
+            <!-- Mobile Nav Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html#whats-new" class="nav-link">Support</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+
+
+<!-- LOGIN PAGE  -->
+<div class="wrapper">
+
+    <div class="login-container">
+        
+        <div class="tabs">
+            <button class="tab active" data-target="student-form">STUDENT</button>
+            <button class="tab" data-target="staff-form">STAFF</button>
+        </div>
+
+        <div class="forms">
+            
+            <!-- Student Login -->
+            <form id="student-form" class="form active">
+                <h2>STUDENT LOGIN</h2>
+
+                <div class="input-field">
+                    <label>Student ID</label>
+                    <div class="input-box">
+                        <input type="text" placeholder="Enter student ID" required>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Password</label>
+                    <div class="input-box">
+                        <input type="password" placeholder="Enter password" required>
+                    </div>
+                </div>
+
+                <button class="submit-btn">Login</button>
+                <p class="forgot">Forgot password?</p>
+            </form>
+
+            <!-- Staff Login -->
+            <form id="staff-form" class="form">
+                <h2>STAFF LOGIN</h2>
+
+                <div class="input-field">
+                    <label>Email / Staff ID</label>
+                    <div class="input-box">
+                        <input type="text" placeholder="Enter staff ID or email" required>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Password</label>
+                    <div class="input-box">
+                        <input type="password" placeholder="Enter password" required>
+                    </div>
+                </div>
+
+                <button class="submit-btn">Login</button>
+                <p class="forgot">Forgot password?</p>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p><strong>Student Name:</strong> TUMUSIIME EDWARD</p>
+    <p><strong>Registration No:</strong> 2025-B221-10543</p>
+    <p><strong>Student No:</strong> 2500500543</p>
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="login.js"></script>
+
+</body>
+</html>
