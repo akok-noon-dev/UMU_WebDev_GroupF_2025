@@ -1,31 +1,82 @@
-* {
+/* GLOBAL STYLES */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background: #f5f5f5;
 }
 
-body {
-    background: linear-gradient(135deg, rgb(30, 94, 121), #686560);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+/* NAVBAR */
+
+.main-header {
+    background:  #5b2c04; /* UMU green */
+    padding: 5px 0;
 }
+
+.navbar-brand img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.university-title h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.university-title p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: -5px;
+}
+
+.highlight-initial {
+    color: #ffcc00; 
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff !important;
+    margin-left: 15px;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important;
+}
+
+
+
+/* LOGIN WRAPPER */
 
 .wrapper {
     width: 100%;
-    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
 }
 
+
+
+/* LOGIN CONTAINER*/
+
 .login-container {
-    background: rgba(255, 255, 255, 0.12);
-    padding: 30px;
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 0 25px rgba(0,0,0,0.3);
-    animation: fadeIn 1s ease;
+    width: 380px;
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
 }
+
+
+
+/* TABS */
 
 .tabs {
     display: flex;
@@ -34,30 +85,27 @@ body {
 }
 
 .tab {
-    width: 50%;
-    padding: 12px 0;
+    width: 48%;
+    padding: 10px;
+    background: #ddd;
     border: none;
-    background: rgba(255,255,255,0.15);
-    color: #fff;
     cursor: pointer;
     font-weight: 500;
-    transition: 0.3s;
-    border-radius: 8px;
+    border-radius: 5px;
+    transition: 0.3s ease;
 }
 
 .tab.active {
-    background: #fff;
-    color: #003366;
-    font-weight: 600;
+    background: #5b2c04;
+    color: #fff;
 }
 
-.forms {
-    position: relative;
-}
+
+
+/* FORM STYLING */
 
 .form {
     display: none;
-    animation: slideIn 0.5s ease;
 }
 
 .form.active {
@@ -66,81 +114,70 @@ body {
 
 .form h2 {
     text-align: center;
-    color: #fff;
-    margin-bottom: 25px;
-}
-
-.input-field {
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
+.input-field {
+    margin-bottom: 15px;
+}
+
 .input-field label {
-    color: #dfeafb;
-    font-size: 14px;
-}
-
-.input-box {
-    margin-top: 5px;
-    background: rgba(255,255,255,0.18);
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-}
-
-.icon {
-    margin-right: 10px;
-    font-size: 18px;
-    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .input-box input {
     width: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
 .submit-btn {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
+    background: #5b2c04;
     border: none;
-    margin-top: 10px;
-    background: #fff;
-    color: #003366;
-    border-radius: 10px;
-    font-size: 16px;
+    color: #fff;
     font-weight: 600;
+    border-radius: 5px;
+    margin-top: 10px;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 .submit-btn:hover {
-    background: #d6e4ff;
+    background:  #5b2c04;
 }
 
 .forgot {
     text-align: center;
-    font-size: 14px;
     margin-top: 10px;
-    color: #c7dfff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #0055aa;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to   { opacity: 1; transform: scale(1); }
-}
 
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-.footer p{
+
+/* FOOTER */
+
+footer {
+    width: 100%;
     text-align: center;
+    background: #5b2c04;
+    color: #fff;
+    padding: 18px 10px;
+    margin-top: 40px;
 }
-.footer{
-    back
+
+footer p {
+    margin: 3px 0;
+    font-size: 0.95rem;
+}
+
+footer strong {
+    color: #ffcc00;
 }
