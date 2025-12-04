@@ -1,255 +1,93 @@
-/* =================================
-   cat.css - Combined Stylesheet
-   ================================= */
 
-/* --- General Reset & Main Layout --- */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
 
-body {
-    padding-top: 56px; /* Space for fixed/sticky navbar */
-    background-color: #f8f9fa; /* Light grey background for the main content area */
-    color: #343a40;
-}
+        /* Navbar Styles */
+        .main-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030;
+        }
 
-a {
-    text-decoration: none; /* Remove underline from all links */
-}
+        .highlight-initial {
+            color: #CC1B00; /* UMU Red */
+            font-weight: bold;
+        }
+        
+        /* Spacing for fixed navbar */
+        .main-content-wrapper {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
 
-/* Ensure main content is visible below the fixed header (from your code) */
-main {
-    /* Padding set in HTML body, but ensuring it overrides any external defaults */
-    padding-top: 4.5rem; 
-}
+        /* Carousel & Slide Styling */
+        .carousel {
+            margin-bottom: 4rem; /* Space between carousels */
+        }
 
-/* --- Header & Navigation Styles --- */
+        .book-slide {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
 
-.main-header {
-    width: 100%;
-    /* Stronger semi-opaque background so navbar content remains readable (from your code) */
-    background-color: rgba(0, 0, 0, 0.92);
-    backdrop-filter: blur(4px);
-    padding: 10px 0;
-    position: fixed;
-    z-index: 3000; /* ensure navbar sits above floating cards (from your code) */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Stronger shadow for the fixed header */
-}
+        .book-description {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-.navbar {
-    font-size: 1rem;
-    text-transform: capitalize;
-}
+        .book-description h3 {
+            font-weight: 800;
+            color: #CC1B00;
+            margin-bottom: 0.5rem;
+            font-size: 1.75rem;
+        }
 
-.nav-link {
-    color: #f5f5f5 !important;
-    font-weight: 500;
-    transition: 0.3s ease-in-out;
-    padding-left: 1rem !important; /* Ensure consistent spacing */
-    padding-right: 1rem !important;
-}
+        .book-description .author {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
 
-.nav-link:hover,
-.nav-link.active {
-    color: #CC1B00 !important;
-    transform: translateY(-2px); /* Lift effect on hover (from your code) */
-}
+        .book-cover {
+            height: 450px; /* Consistent height */
+            width: 100%;
+            object-fit: cover;
+        }
 
-/* Toggler contrast on dark header (from your code) */
-.navbar-toggler {
-    border-color: rgba(255,255,255,0.15);
-}
-.navbar-toggler-icon {
-    filter: invert(1) brightness(2);
-}
+        /* Section Headers */
+        .carousel-title {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 5px solid #CC1B00;
+            color: #212529;
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 1.5rem 0;
+            border-top: 4px solid #CC1B00;
+        }
 
-.btn-login {
-    padding: 8px 15px;
-    border-radius: 6px;
-    font-weight: 600;
-    /* Ensure the button maintains its specified colors */
-    background-color: #CC1B00 !important; 
-    color: white !important;
-    transition: 0.3s ease-in-out;
-}
-.btn-login:hover {
-    background-color: #a81600 !important; /* Slightly darker red on hover */
-    color: #fff !important;
-    transform: translateY(-2px);
-}
-
-/* UMU Title Styles (Retained from previous CSS) */
-.university-title {
-    line-height: 1.2;
-}
-
-.university-title h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.highlight-initial {
-    color: #CC1B00; /* Dark Red color for initials */
-    font-weight: 900;
-}
-
-/* --- Content Section Titles --- */
-
-.categories-page h1 {
-    color: #CC1B00; /* Dark Red color for the main heading */
-    margin-bottom: 0.5rem;
-}
-
-.section-header p {
-    color: #666; /* Ensures descriptive text color is readable */
-}
-
-.fw-bold {
-    letter-spacing: 0.2px; /* Improves title aesthetics (from your code) */
-}
-
-/* --- Card Base Styles & Interactions (from your code) --- */
-
-/* Base transitions for smooth effects */
-.card {
-    transition: transform .22s cubic-bezier(.2,.8,.2,1), box-shadow .22s ease;
-    will-change: transform;
-}
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-    cursor: pointer;
-}
-
-/* JS-applied interaction state: mirrors :hover for pointer/touch/keyboard users */
-.card.interacting {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-    cursor: pointer;
-}
-
-/* Make focus visible and consistent when keyboard navigating */
-.card:focus-within {
-    outline: 3px solid rgba(0,123,255,0.18);
-    outline-offset: 3px;
-}
-
-/* outline highlight when navigated via query param (from your code) */
-.outline-highlight {
-    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
-    transition: box-shadow 0.25s ease-in-out;
-}
-
-/* Provide consistent card image sizing */
-.card-img-top {
-    height: 220px;
-    object-fit: cover;
-}
-
-/* --- Category Card Wrapper (The Dark Red Box) --- */
-
-/* Renamed from .dark-red-wrapper to .category-card, adopting the styling of the former */
-.category-card {
-    background-color: #CC1B00; /* Dark red background */
-    padding: 15px; /* Add some padding inside the wrapper */
-    border-radius: 0.75rem; /* Match card radius and visual style */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12); /* Base shadow (from your code) */
-    transition: transform .22s cubic-bezier(.2,.8,.2,1), box-shadow .22s ease; /* Transition for lift */
-}
-
-/* Slightly stronger lift for category wrapper cards (from your code) */
-.category-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 22px 50px rgba(0,0,0,0.2);
-}
-
-.category-card.interacting {
-    transform: translateY(-10px);
-    box-shadow: 0 22px 50px rgba(0,0,0,0.2);
-}
-
-/* Ensure the inner card and book list links stand out against the dark red background */
-.category-card .card {
-    background-color: transparent !important; /* Make inner card transparent (from previous CSS) */
-    border: none; /* Remove border for a cleaner look */
-    /* Override card base transition for the inner card when inside the wrapper */
-    transition: none; 
-}
-/* Disable lift on inner card when wrapper handles the lift */
-.category-card .card:hover {
-    transform: none;
-    box-shadow: none;
-    cursor: default;
-}
-
-
-/* Text color override for readability inside the dark red wrapper */
-.category-card .card-body .card-title,
-.category-card .card-body .card-text,
-.category-card .card-body .category-book-list a {
-    color: white !important; 
-}
-
-/* Adjust the list items inside the wrapper */
-.category-card .category-book-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0.5rem;
-}
-
-.category-card .category-book-list a:hover {
-    text-decoration: underline;
-    color: #f8f9fa !important;
-}
-
-/* Style the 'View Books' button for contrast */
-.category-card .btn-outline-light {
-    border-color: white;
-    color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.category-card .btn-outline-light:hover {
-    background-color: white;
-    color: #CC1B00; /* Dark Red text on white background on hover */
-}
-
-/* --- Footer Styles (Black Background, White Text) --- */
-
-.footer {
-    background-color: #000000; /* Black background as requested */
-    color: #ffffff; /* White text for high readability/contrast */
-    padding: 25px 0; /* Adopt your padding (25px) */
-    margin-top: 40px;
-    border-top: 3px solid #CC1B00; /* Visual accent */
-}
-
-.footer-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-content p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.footer-content strong {
-    color: #CC1B00; /* Highlight important text in dark red */
-}
-
-.student-details {
-    margin-top: 10px;
-    font-size: 0.85rem;
-}
-
-.student-details p {
-    margin-bottom: 0;
-}
-
-/* Media Query for larger screens */
-@media (min-width: 768px) {
-    .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
+        /* Responsive */
+        @media (max-width: 768px) {
+            .book-cover { height: 300px; }
+            .book-description { padding: 1.5rem; }
+        }
+        .md\:w-1\/2 {
+    width: 50%;
+    padding: 34px;
+    margin: 12px;
+  }
+    
